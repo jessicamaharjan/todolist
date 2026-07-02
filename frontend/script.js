@@ -3,7 +3,7 @@ async function loadMenu() {
   if (!menuList) return;
 
   try {
-    const response = await fetch('http://localhost:5000/api/menu');
+    const response = await fetch('http://localhost:2222/api/menu');
     const items = await response.json();
 
     menuList.innerHTML = items.map((item) => `
@@ -32,7 +32,7 @@ if (form) {
     };
 
     try {
-      const response = await fetch('http://localhost:5000/api/orders', {
+      const response = await fetch('http://localhost:2222/api/orders', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
