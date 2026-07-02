@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moonlight Cafe</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Moonlight Cafe</p>
+          <h1>Cozy coffee, bright mornings, and sweet little rituals.</h1>
+          <p>
+            Fresh pastries, signature drinks, and a warm corner to linger in all day.
+          </p>
+          <a class="button" href="#menu">Browse today’s menu</a>
+        </div>
+        <div class="hero-card">
+          <h2>Today’s pick</h2>
+          <p>Velvet Latte</p>
+          <span>Silky oat foam with a hint of cinnamon</span>
+        </div>
+      </header>
+
+      <section class="info-strip">
+        <div>Open daily · 7am - 7pm</div>
+        <div>Freshly baked every morning</div>
+        <div>Wi-Fi, playlists, and slow sips</div>
+      </section>
+
+      <section id="menu" class="menu-section">
+        <div class="section-heading">
+          <h2>Signature menu</h2>
+          <p>Choose your favorite comfort.</p>
+        </div>
+        <div id="menu-list" class="menu-grid"></div>
+      </section>
+
+      <section class="order-card">
+        <h2>Reserve your favorite</h2>
+        <form id="order-form">
+          <input type="text" name="customerName" placeholder="Your name" required />
+          <input type="text" name="itemName" placeholder="Menu item" required />
+          <button type="submit">Send order</button>
+        </form>
+        <p id="order-message" class="message"></p>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

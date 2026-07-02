@@ -1,0 +1,158 @@
+:root {
+  color-scheme: dark;
+  --bg: #140f1d;
+  --panel: rgba(255, 255, 255, 0.08);
+  --text: #fdf6eb;
+  --muted: #c8bdb4;
+  --accent: #ffb267;
+  --accent-2: #8d6bff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, var(--bg), #241c35);
+  color: var(--text);
+}
+
+.page-shell {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.6fr 0.9fr;
+  gap: 24px;
+  padding: 40px;
+  border-radius: 28px;
+  background: linear-gradient(120deg, rgba(255, 178, 103, 0.22), rgba(141, 107, 255, 0.2));
+  backdrop-filter: blur(18px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.22);
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.32em;
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin: 8px 0;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 16px;
+  background: var(--accent);
+  color: #23170b;
+  text-decoration: none;
+  padding: 12px 18px;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.hero-card,
+.order-card,
+.menu-card {
+  background: var(--panel);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.info-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.info-strip > div {
+  background: var(--panel);
+  padding: 16px;
+  border-radius: 16px;
+  text-align: center;
+  color: var(--muted);
+}
+
+.menu-section {
+  margin-top: 24px;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.menu-card h3 {
+  margin: 0 0 6px;
+}
+
+.menu-card p {
+  color: var(--muted);
+}
+
+.price {
+  color: var(--accent);
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.order-card {
+  margin-top: 24px;
+}
+
+form {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+input {
+  flex: 1;
+  min-width: 180px;
+  padding: 12px 14px;
+  border-radius: 999px;
+  border: none;
+  outline: none;
+}
+
+button {
+  border: none;
+  border-radius: 999px;
+  padding: 12px 18px;
+  background: var(--accent-2);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.message {
+  min-height: 24px;
+  color: #ffe0b7;
+  margin-top: 10px;
+}
+
+@media (max-width: 780px) {
+  .hero,
+  .info-strip,
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+}
