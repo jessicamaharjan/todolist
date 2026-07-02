@@ -1,9 +1,10 @@
+const API_BASE_URL = 'http://54.211.188.243:2222';
 async function loadMenu() {
   const menuList = document.getElementById('menu-list');
   if (!menuList) return;
 
   try {
-    const response = await fetch('http://localhost:2222/api/menu');
+    const response = await fetch(`${API_BASE_URL}/api/menu`);
     const items = await response.json();
 
     menuList.innerHTML = items.map((item) => `
@@ -31,8 +32,8 @@ if (form) {
       itemName: data.get('itemName')
     };
 
-    try {
-      const response = await fetch('http://localhost:2222/api/orders', {
+      try {
+      const response = await fetch(`${API_BASE_URL}/api/orders`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
