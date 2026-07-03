@@ -15,8 +15,8 @@ A minimal full-stack todo app with:
    ```
 3. Open:
    - Frontend: http://localhost:1111
-   - Backend health: http://localhost:2222/health
-   - Todo API: http://localhost:2222/api/todos
+   - Backend health: http://54.211.188.243:222/health
+   - Todo API: http://54.211.188.243:222/api/todos
 
 ## API
 

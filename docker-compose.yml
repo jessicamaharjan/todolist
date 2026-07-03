@@ -19,7 +19,7 @@ services:
       DB_PASSWORD: todo123
       DB_NAME: todoapp
     ports:
-      - "2222:5000"
+      - "222:5000"
     depends_on:
       - db
 

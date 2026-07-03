@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://localhost:2222';
+const API_BASE_URL = 'http://54.211.188.243:222';
 
 const todoForm = document.getElementById('todo-form');
 const todoInput = document.getElementById('todo-input');
