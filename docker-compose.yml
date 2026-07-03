@@ -2,22 +2,22 @@ services:
   db:
     image: postgres:16-alpine
     environment:
-      POSTGRES_DB: cafe
-      POSTGRES_USER: cafe
-      POSTGRES_PASSWORD: cafe123
+      POSTGRES_DB: todoapp
+      POSTGRES_USER: todo
+      POSTGRES_PASSWORD: todo123
     ports:
       - "5432:5432"
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - todo_postgres_data:/var/lib/postgresql/data
 
   backend:
     build: ./backend
     environment:
       DB_HOST: db
       DB_PORT: 5432
-      DB_USER: cafe
-      DB_PASSWORD: cafe123
-      DB_NAME: cafe
+      DB_USER: todo
+      DB_PASSWORD: todo123
+      DB_NAME: todoapp
     ports:
       - "2222:5000"
     depends_on:
@@ -31,4 +31,4 @@ services:
       - backend
 
 volumes:
-  postgres_data:
+  todo_postgres_data:
